@@ -1,15 +1,21 @@
-#include <iostream> 
 
-using namespace std; 
+#include "GameState.h"
 
-int play_game() {
-    // create a game state 
-    // ping it to server 
-    // listen for response 
+using namespace std;
+
+int play_game()
+{
+    GameState *gameState = new GameState();
+    while (!gameState->done()) {
+        cout << gameState->serialize();
+    }
+    
+    // ping it to server
+    // listen for response
+    return 0;
 }
 
-int main() {
+int main()
+{
     play_game();
-    cout << "hello world" << "\n";
-
 }

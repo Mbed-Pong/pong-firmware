@@ -24,4 +24,21 @@ public:
     void setPosition(int8_t x, int8_t y);
 };
 
+class Platform : public Sprite
+{
+private:
+    sprite_type type; 
+public:
+    Platform(Coordinate position);
+};
+
+
+class Ball : public Sprite
+{
+private:
+    sprite_type type; 
+public:
+    Ball(Coordinate position);
+};
+
 #endif // SPRITE_H_

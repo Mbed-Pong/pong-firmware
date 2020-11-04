@@ -1,17 +1,43 @@
-#include <utility>
-#include <stdlib.h>
 
-class GameState {
-    private:
-        std::pair<int8_t, int8_t> ball_loc; 
-        std::pair<int8_t, int8_t> player1_loc; 
-        std::pair<int8_t, int8_t> player2_loc; 
-    public: 
-        GameState(); 
-        ~GameState();
-        std::pair<int8_t, int8_t> get_ball_loc(); 
-        std::pair<int8_t, int8_t> get_player1_loc(); 
-        std::pair<int8_t, int8_t> get_player2_loc(); 
+#ifndef GAME_STATE_H_
+#define GAME_STATE_H_
 
-        void serialize(); 
+#define PLAYER_1_INIT_X 0
+#define PLAYER_1_INIT_Y 63
+
+#define PLAYER_2_INIT_X 127
+#define PLAYER_2_INIT_Y 63
+
+#define BALL_INIT_X 63
+#define BALL_INIT_Y 63
+
+#define BALL_DIR_INIT_X 1; 
+#define BALL_DIR_INIT_Y 0; 
+
+#include "deps.h"
+#include "Sprite.h"
+
+// make abstraction more intuitive Player1-->(pos, score), Player2
+
+class GameState
+{
+private:
+    Platform *playerOne; 
+    Platform *playerTwo; 
+    Ball *ball; 
+    Vector2d ballDirection; 
+    Score score; 
+    int8_t turn;
+
+public:
+    GameState();
+    ~GameState();
+    std::string serialize();
+
+    bool done(); 
+    void update(); 
+
+    // getters and setters 
 };
+
+#endif // GAME_STATE_H_
