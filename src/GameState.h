@@ -11,8 +11,8 @@
 #define BALL_INIT_X 63
 #define BALL_INIT_Y 63
 
-#define BALL_DIR_INIT_X 1; 
-#define BALL_DIR_INIT_Y 0; 
+#define BALL_DIR_INIT_X 1;
+#define BALL_DIR_INIT_Y 0;
 
 #include "deps.h"
 #include "Sprite.h"
@@ -22,11 +22,10 @@
 class GameState
 {
 private:
-    Platform *playerOne; 
-    Platform *playerTwo; 
-    Ball *ball; 
-    Vector2d ballDirection; 
-    Score score; 
+    Player *p1;
+    Player *p2;
+    Ball *ball;
+    Vector2d ballDirection;
     int8_t turn;
 
 public:
@@ -34,10 +33,10 @@ public:
     ~GameState();
     std::string serialize();
 
-    bool done(); 
-    void update(); 
+    bool done();
+    void update();
 
-    // getters and setters 
+    // getters and setters
 };
 
 #endif // GAME_STATE_H_

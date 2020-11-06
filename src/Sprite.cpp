@@ -3,7 +3,7 @@
 
 Sprite::Sprite(Coordinate position)
 {
-    this->position = position; 
+    this->position = position;
 }
 
 Coordinate Sprite::getPosition()
@@ -18,18 +18,29 @@ sprite_type Sprite::getType()
 
 void Sprite::setPosition(int8_t x, int8_t y)
 {
-    this->position.x = x; 
-    this->position.y = y; 
+    this->position.x = x;
+    this->position.y = y;
 }
 
-Platform::Platform(Coordinate position)
-: Sprite(position)
+Player::Player(Coordinate position)
+    : Sprite(position)
 {
-    this->type = PLATFORM; 
+    this->type = PLAYER;
+    this->score = 0; 
+}
+
+void Player::incrementScore() 
+{
+    this->score++; 
+}
+
+int8_t Player::getScore() 
+{
+    return this->score; 
 }
 
 Ball::Ball(Coordinate position)
-: Sprite(position)
+    : Sprite(position)
 {
-    this->type = BALL; 
+    this->type = BALL;
 }

@@ -7,7 +7,7 @@
 enum sprite_type
 {
     BALL,
-    PLATFORM,
+    PLAYER,
 };
 
 class Sprite
@@ -24,19 +24,23 @@ public:
     void setPosition(int8_t x, int8_t y);
 };
 
-class Platform : public Sprite
+class Player : public Sprite
 {
 private:
-    sprite_type type; 
-public:
-    Platform(Coordinate position);
-};
+    sprite_type type;
+    int8_t score; 
 
+public:
+    Player(Coordinate position);
+    void incrementScore();
+    int8_t getScore(); 
+};
 
 class Ball : public Sprite
 {
 private:
-    sprite_type type; 
+    sprite_type type;
+
 public:
     Ball(Coordinate position);
 };

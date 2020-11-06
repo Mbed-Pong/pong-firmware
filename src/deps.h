@@ -12,12 +12,6 @@ struct Coordinate
     int8_t y;
 };
 
-typedef struct Coordinate Vector2d; 
-
-struct Score
-{
-    int8_t playerOne;
-    int8_t playerTwo; 
-};
+typedef struct Coordinate Vector2d;
 
 #endif // DEPS_H_
