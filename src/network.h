@@ -1,19 +1,17 @@
 
-// #include "deps.h"
-// #include <sys/socket.h> 
-// #include <netinet/in.h>
+#ifndef NET_H_
+#define NET_H_
 
-// #define PORT 3030
+#include <sys/socket.h> 
+#include <netinet/in.h>
 
-// int initSocket() 
-// {
-//     int server_fd; 
-//     struct sockaddr_in addr;
 
-// }
+#include "deps.h"
 
-// int send() {
+#define PORT 3030
+#define ADDRESS "127.0.0.1"
 
-// }
+int testSocket();
 
+#endif // NET_H_
 

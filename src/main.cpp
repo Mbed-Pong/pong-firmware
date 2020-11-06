@@ -1,15 +1,14 @@
 
 #include "GameState.h"
+#include "Network.h"
 
 using namespace std;
 
 int play_game()
 {
     GameState *gameState = new GameState();
-    while (!gameState->done())
-    {
-        cout << gameState->serialize();
-    }
+    cout << gameState->serialize();
+    testSocket();
 
     // ping it to server
     // listen for response

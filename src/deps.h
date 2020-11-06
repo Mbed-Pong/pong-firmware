@@ -2,9 +2,16 @@
 #ifndef DEPS_H_
 #define DEPS_H_
 
-#include <stdlib.h>
-#include <iostream>
-#include <string>
+#include <iostream> 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include<arpa/inet.h>
+#include<unistd.h>
+#include<stdbool.h>
+#include<ctype.h>
 
 struct Coordinate
 {
