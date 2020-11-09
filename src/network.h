@@ -9,7 +9,7 @@
 #include "deps.h"
 
 #define PORT 3030
-#define ADDRESS "127.0.0.1"
+// #define ADDRESS "127.0.0.1"
 
 int testSocket();
 
